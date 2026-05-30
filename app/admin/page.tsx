@@ -411,7 +411,7 @@ function ProjectDetailEditor({
     updateSection(si, { ...sections[si], videos });
   };
   const removeSection = (i: number) => {
-    onChange({ ...project, sections: sections.filter((_, j) => j !== i) });
+    onChange({ ...project, sections: sections.filter((_, j) => j !== i) } as ProjectData);
   };
   const moveSection = (i: number, dir: -1 | 1) => {
     const j = i + dir;
