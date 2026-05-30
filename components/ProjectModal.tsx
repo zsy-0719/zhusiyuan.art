@@ -168,9 +168,9 @@ function CharacterCards({
         {characters.map((char, ci) => (
           <div
             key={ci}
-            className="flex gap-4 p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/50 dark:bg-zinc-950/50"
+            className="flex flex-col sm:flex-row gap-4 p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/50 dark:bg-zinc-950/50"
           >
-            <div className="flex gap-2 shrink-0">
+            <div className="flex gap-2 shrink-0 flex-wrap">
               {char.images.map((img, ii) => (
                 <button
                   key={ii}
@@ -293,8 +293,11 @@ export default function ProjectModal({
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">{section.intro}</p>
                 )}
 
-                {section.videos && section.videos.length > 0 && <VideoGrid videos={section.videos} />}
-                {section.images && section.images.length > 0 && <ImageGrid images={section.images} />}
+                {section.videos && section.videos.length > 0 ? (
+                  <VideoGrid videos={section.videos} />
+                ) : (
+                  section.images && section.images.length > 0 && <ImageGrid images={section.images} />
+                )}
                 {section.characters && <CharacterCards characters={section.characters} />}
               </div>
             ))}
