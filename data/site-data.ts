@@ -323,7 +323,7 @@ export const workflowData = {
         { src: "", label: "" },
       ],
       audio: [
-        { src: "/uploads/workflow-phase-3-audio-0.wav", label: "在路边长大的夏天" },
+        { src: "/uploads/workflow-phase-3-audio-0.mp3", label: "在路边长大的夏天" },
         { src: "/uploads/workflow-phase-3-audio-1.mp3", label: "老唐去世" },
         { src: "/uploads/workflow-phase-3-audio-2.mp3", label: "节奏欢快" },
       ],
