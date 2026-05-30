@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm *)",
+      "Bash(where npm *)",
+      "Bash(npm.cmd *)",
+      "Bash(npx.cmd create-next-app@latest *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(NODE_OPTIONS=\"--dns-result-order=ipv4first\" npm.cmd run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(start http://localhost:3000)",
+      "Bash(npx.cmd --yes docx2txt \"zsy/朱思源_AIGC编导_简历.docx\")",
+      "Bash(NODE_OPTIONS=\"--dns-result-order=ipv4first\" npx.cmd next *)",
+      "Bash(start http://localhost:3000/admin)",
+      "PowerShell($env:NODE_OPTIONS = \"--dns-result-order=ipv4first\"; npm.cmd run build 2>&1)",
+      "Bash(start *)",
+      "PowerShell($env:NODE_OPTIONS = \"--dns-result-order=ipv4first\"; npx next dev -p 3721)",
+      "PowerShell(taskkill *)",
+      "PowerShell($env:NODE_OPTIONS = \"--dns-result-order=ipv4first\"; npx next dev -p 3000)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)",
+      "Bash(Select-Object -First 20)",
+      "WebSearch",
+      "Bash(Select-Object -First 30)",
+      "Bash(node *)"
+    ]
+  }
+}
