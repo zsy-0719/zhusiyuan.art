@@ -35,17 +35,30 @@ export const heroData = {
   subtitle: "AIGC 编导 · AI 视频导演 · 概念视觉开发",
   name: "朱思源",
   tagline: [
-    "AI 时代的内容创作者 —— 理解视听语言如何与 AI 能力结合，",
-    "从文本到成片，全链路讲好每一个故事。",
+    "从剧本内核到最终呈现 全流程内容创作的AIGC编导超级个体",
+    "用镜头和审美，把好故事落地",
   ],
   personalLines: [
-    "ENFJ · 理想主义的行动派",
-    "书法 · 笔墨之间见天地",
-    "摄影 · 用镜头捕捉生活切片",
-    "登山 · 每周至少爬一次山",
-    "Vibe Coding · 用 AI 把想法变成产品",
-    "咖啡成瘾 · 手冲是早晨的仪式感",
-    "帮朋友写脚本 · 从豆瓣评论到论文论据",
+    "ENFJ但是没有人觉得我像E人",
+    "书法爱好者",
+    "瞎拍摄影师",
+    "深圳十峰还差莲花山",
+    "Vibe Coding贴钱玩家",
+    "热美式苦中作乐",
+    "干中学",
+    "看准方向就行动",
+    "周杰伦二十年粉丝",
+    "雷达级敏感，泰坦级抗压 🛡️",
+    "共情力 MAX 的叙事者",
+    "A股资深韭菜",
+    "AI漫剧全干工程师 💻",
+    "AI深度探索中.....",
+    "刘亦菲是我女神",
+    "暖男巨蟹座",
+    "不喜欢内耗",
+    "从不失眠",
+    "活到老学到老",
+    "喜欢看电影",
   ],
 };
 
@@ -73,20 +86,25 @@ export const projectsData = [
     description:
       "独立完成从世界观构建、剧本创作到成片输出的全流程 AI 漫剧制作。包含角色设计、分镜拆解、AI 视频生成、后期合成与配乐，形成完整的 AIGC 生产闭环。",
     tags: ["Midjourney", "可灵 / 即梦", "Suno 配乐", "Photoshop", "剪映 / PR"],
-    image: "/images/zhenelu-cover.png",
+    image: "/uploads/project-0.jpg",
     color:
       "from-amber-500/10 to-red-500/10 dark:from-amber-500/5 dark:to-red-500/5",
     sections: [
       {
         title: "故事简介",
         intro:
-          "上一世，凭借一口能够吸收他人厄运增强功力的镇厄炉，陈故各种开挂升级，胡作非为，横行无忌。结果一念之差，居然为了救一个人，裂炉而死。意外重生回到 1995 年，陈故暗暗发誓：这一世，我一定要守住自己坏人的人设！",
-        images: [],
-      },
-      {
-        title: "视频链接",
+          `上一世，凭借一口能够吸收他人厄运增强功力的镇厄炉，陈故各种开挂升级，胡作非为，横行无忌。
+结果一念之差，居然为了救一个人，裂炉而死。
+意外重生回到 1995 年，陈故暗暗发誓：这一世，我一定要守住自己坏人的人设！`,
+        images: [
+          { src: "/uploads/project-0-section-0-img-0.jpg", label: "第一集" },
+          { src: "/uploads/project-0-section-0-img-1.jpg", label: "第二集" },
+          { src: "/uploads/project-0-section-0-img-2.jpg", label: "第三集" },
+        ],
         videos: [
-          { cover: "/images/zhenelu-cover.png", label: "预告片", link: "https://pan.baidu.com/s/17tuGx9khtHrN9xJ0rPnnhw?pwd=6666" },
+          { cover: "/uploads/project-0-section-0-img-0.jpg", label: "第一集", link: "https://pan.baidu.com/s/17tuGx9khtHrN9xJ0rPnnhw?pwd=6666" },
+          { cover: "/uploads/project-0-section-0-img-1.jpg", label: "第二集", link: "https://pan.baidu.com/s/1HNM4f8EkMMOkWZMPz2S1mw?pwd=6666" },
+          { cover: "/uploads/project-0-section-0-img-2.jpg", label: "第三集", link: "https://pan.baidu.com/s/1ew7iCcywO6k20tSGhQTNdA?pwd=6666" },
         ],
       },
       {
@@ -95,7 +113,8 @@ export const projectsData = [
         characters: [
           {
             name: "陈故（主角）",
-            desc: "神秘「镇厄炉」的拥有者，重生前已将镇厄炉升至八阶，差一步大圆满。前世为救一个身具大因果之人而死。死后重生回到 1995 年，那一年陈故十八岁，大学生。",
+            desc: `神秘「镇厄炉」的拥有者，重生前已将镇厄炉升至八阶，差一步大圆满。
+前世为救一个身具大因果之人而死。死后重生回到 1995 年，那一年陈故十八岁，大学生。`,
             images: [
               "/images/zhenelu/character-01.png",
               "/images/zhenelu/character-02.png",
@@ -104,12 +123,14 @@ export const projectsData = [
           },
           {
             name: "周宁",
-            desc: "中医传承家庭的长女。家境优越，爷爷更是顶尖中医名家。因抗拒长辈安排的刻板人生，她叛逆离家，躲进小医院当起基层护士。她与陈故偶然相遇，两人的交织让她的逃离之路走向了未知的方向。",
+            desc: `中医传承家庭的长女。家境优越，爷爷更是顶尖中医名家。
+因抗拒长辈安排的刻板人生，她叛逆离家，躲进小医院当起基层护士。
+她与陈故偶然相遇，两人的交织让她的逃离之路走向了未知的方向。`,
             images: ["/images/zhenelu/character-zhouning.png"],
           },
           {
             name: "林朝",
-            desc: "陈故好友，古武家族出身。前世意外死于一场试炼。性格和陈故相比，略显木讷。善良而忠诚。",
+            desc: "陈故好友，古武家族出身。前世意外死于一场试炼。性格和陈故相比，略显木讷，善良而忠诚。",
             images: [
               "/images/zhenelu/character-linchao-01.png",
               "/images/zhenelu/character-linchao-02.png",
@@ -129,14 +150,13 @@ export const projectsData = [
         title: "分镜图",
         images: [
           { src: "/images/zhenelu/sb-01.jpeg", label: "场景 01" },
-          { src: "/images/zhenelu/sb-00-1-1.jpeg", label: "场景 00-1-1" },
+          { src: "/uploads/project-0-section-2-img-1.jpg", label: "场景 00-1-1" },
           { src: "/images/zhenelu/sb-00-11.jpeg", label: "场景 00-11" },
           { src: "/images/zhenelu/sb-00-13.png", label: "场景 00-13" },
-          { src: "/images/zhenelu/sb-00-15.png", label: "场景 00-15" },
-          { src: "/images/zhenelu/sb-17.jpeg", label: "场景 17" },
+          { src: "/uploads/project-0-section-2-img-4.jpg", label: "场景 17" },
           { src: "/images/zhenelu/sb-天台04.png", label: "天台" },
-          { src: "/images/zhenelu/sb-打针(4).png", label: "打针" },
-          { src: "/images/zhenelu/sb-拿水1-8.jpeg", label: "拿水" },
+          { src: "/uploads/project-0-section-2-img-6.jpg", label: "打针" },
+          { src: "/uploads/project-0-section-2-img-7.jpg", label: "拿水" },
           {
             src: "/images/zhenelu/sb-masterpiece,_8K,_ultra-realistic,_202604151725.png",
             label: "概念图",
@@ -147,15 +167,13 @@ export const projectsData = [
         title: "封面与文字设计",
         images: [
           { src: "/images/zhenelu/cover-抖音封面.png", label: "抖音封面" },
-          { src: "/images/zhenelu/cover-厄渡竖.png", label: "厄渡（竖）" },
           { src: "/images/zhenelu/cover-厄炉（竖.png", label: "厄炉（竖）" },
-          { src: "/images/zhenelu/cover-3.jpeg", label: "封面 03" },
         ],
       },
       {
         title: "关键资产",
         images: [
-          { src: "/images/zhenelu/asset-厄炉视觉.png", label: "厄炉视觉" },
+          { src: "/uploads/project-0-section-4-img-0.jpg", label: "厄炉视觉" },
           {
             src: "/images/zhenelu/asset-大树守卫白底三视图.jpeg",
             label: "大树守卫",
@@ -164,6 +182,7 @@ export const projectsData = [
           { src: "/images/zhenelu/asset-怪物形象.jpeg", label: "怪物形象" },
           { src: "/images/zhenelu/asset-炼化概念.jpeg", label: "炼化概念" },
           { src: "/images/zhenelu/asset-识海.png", label: "识海" },
+          { src: "/uploads/project-0-section-4-img-6.jpg", label: "" },
         ],
       },
     ],
@@ -172,27 +191,31 @@ export const projectsData = [
     title: "《背影》",
     category: "剧情短片 · 概念开发",
     description:
-      "一部沿 318 川藏线展开的荒诞又深情的公路片。城中村餐馆老板确诊肝癌晚期，用「卖房娶后妈」的谎言骗回在城市打拼受挫的儿子，一段用谎言唤回、用镜头告别的旅程就此开启。核心冲突：传统父权「为你好」vs 成年儿子「弯路需要自己趟一遍」。",
+      "独立完成从故事到剧本创作到成片输出的全流程AI视频制作。包含角色设计、分镜拆解、AI视频生成、后期合成与配乐，形成完整的 AIGC 生产闭环。",
     tags: ["分镜脚本", "人物设计", "概念视觉", "叙事设计"],
-    image: "/images/beiying-storyboard-01.png",
+    image: "/uploads/project-1.jpg",
     color:
       "from-sky-500/10 to-blue-500/10 dark:from-sky-500/5 dark:to-blue-500/5",
     sections: [
       {
         title: "项目概述",
         intro:
-          "类型：剧情 / 家庭 / 公路片。情感基调：温馨、感人泪下，深度体现东方家庭独有的「拧巴的爱」—— 嘴硬心软，沉默胜于言语。主题句：「他用谎言唤回儿子，用镜头告别自己，用最拧巴的方式说爱你。」",
-        images: [],
-      },
-      {
-        title: "视频链接",
+          `一部沿 318 川藏线展开的荒诞又深情的故事。城中村餐馆老板用「卖房娶后妈」的谎言骗回两年没有回家，在城市打拼受挫的儿子，一段用谎言唤回、用镜头告别的旅程就此开启。
+类型：剧情 / 家庭 / 公路片。
+情感基调：温馨、感人，
+核心冲突：传统父权"为你好"vs 成年儿子"弯路也要自己走一遍"。深度体现东方家庭独有的「拧巴的爱」—— 嘴硬心软，沉默胜于言语。
+主题句：他用谎言唤回儿子，用镜头告别自己，用最拧巴的方式说爱你。`,
+        images: [
+          { src: "/uploads/project-1-section-0-img-0.jpg", label: "背影上集" },
+        ],
         videos: [
-          { cover: "/images/beiying-storyboard-01.png", label: "背影预告片", link: "https://pan.baidu.com/s/17tuGx9khtHrN9xJ0rPnnhw?pwd=6666" },
+          { cover: "/uploads/project-1-section-0-img-0.jpg", label: "背影上集", link: "https://pan.baidu.com/s/1Hnu8jgJYIH9r7zV6egZy6A?pwd=6666" },
         ],
       },
       {
         title: "人物三视图",
         images: [],
+        videos: [],
         characters: [
           {
             name: "唐宁",
@@ -201,7 +224,7 @@ export const projectsData = [
           },
           {
             name: "老唐",
-            desc: "城中村餐馆老板，确诊肝癌晚期仅剩四个月。用最拧巴的方式 —— 一个谎言 —— 唤回儿子，完成最后的告别。",
+            desc: "城中村餐馆老板，嘴硬心软，爱难说出口。用最拧巴的方式，用谎言唤回两年不回家的儿子，完成最后的告别。",
             images: ["/images/beiying/character-老唐白底三视图.png"],
           },
         ],
@@ -211,7 +234,6 @@ export const projectsData = [
         images: [
           { src: "/images/beiying/sb-01.png", label: "分镜 01" },
           { src: "/images/beiying/sb-02.png", label: "分镜 02" },
-          { src: "/images/beiying/sb-03.png", label: "分镜 03" },
           { src: "/images/beiying/sb-04.png", label: "分镜 04" },
           { src: "/images/beiying/sb-05.jpeg", label: "分镜 05" },
           { src: "/images/beiying/sb-06.png", label: "分镜 06" },
@@ -230,47 +252,82 @@ export const projectsData = [
  * ============================================================ */
 export const workflowData = {
   sectionLabel: "创作流程",
-  sectionTitle: "工业化标准，艺术级控制。",
+  sectionTitle: "AI 时代的全链路生产",
   sectionSubtitle:
-    "不仅仅是串联工具，而是建立从文字内核到视觉呈现的绝对秩序。",
+    `剧本拆解（总剧本→单集骨架）→场景并发（锁定单场景，多线程批量生成人物动作素材→定向补拍（依剪辑逻辑精准缝合转场）→音画总装（剪辑对齐，嵌入BGM与音效交付成品）。
+使用Gemini Omni和GPT批量生成分镜。
+成果：打破传统线性制作瓶颈，素材产出效率成倍跃迁`,
   phases: [
     {
-      title: "视听前置的世界构建",
+      title: "剧本与世界观",
       description:
-        "拒绝盲目的 AI「抽卡」。将空间规划的严谨性与专业摄影构图底蕴注入早期脚本。在文字阶段，就以导演视角精准框定架空设定的景别、光影与叙事节奏，为后续的视觉生成建立不可动摇的蓝图。",
-      images: [] as { src: string; label: string }[],
-      techNote:
-        "先用 SketchUp 搭建场景白模确定机位和景别，再以分镜脚本的形式输出给 Midjourney / ComfyUI，保证每次生成都在「导演意图」之内而非随机抽卡。",
+        `具备从"概念孵化"到"视觉落地"的全链路剧本统筹能力。
+熟练掌握"主题锚定 → 规则构建 → 冲突推演 → 结构排布 → 视听具象化"的标准创作过程。
+在实际创作中，能够从大纲逐步拆解详细的分集脚本。
+既能将空间调度思维与专业摄影的镜头语言前置，撰写出包含精确景别、运镜逻辑、视听节奏及特效标注的影视工业级分镜文本，也可以根据生成画面进行实时调整、修改。
+不仅能构建自洽的世界观设定，更能为后续的 AIGC 生成提供相对精确的执行依据。`,
+      images: [
+        { src: "/uploads/workflow-phase-0-img-0.jpg", label: "第一季剧本大纲内容" },
+        { src: "/uploads/workflow-phase-0-img-1.jpg", label: "分集内容" },
+        { src: "/uploads/workflow-phase-0-img-2.jpg", label: "详细分镜脚本" },
+      ],
+      techNote: undefined as string | undefined,
       audio: undefined as { src: string; label: string }[] | undefined,
     },
     {
-      title: "绝对一致性的资产沉淀",
+      title: "资产制作",
       description:
-        "攻克 AIGC 最大的连贯性痛点。通过搭建严密的风格基准与微调模型（LoRA）矩阵，实现角色多角度与面部情绪的稳定输出。构建独立的世界观视觉字典，确保同一项目中核心资产 100% 工业级复用。",
-      images: [] as { src: string; label: string }[],
-      compare: { before: "", after: "", label: "" } as { before: string; after: string; label: string } | undefined,
-      techNote:
-        "基于 Kohya SS 训练角色专属 LoRA（32 张多角度训练集 + 正则化图像），配合 ControlNet Lineart 锁定轮廓、ReferenceNet 锁定面部特征，三重视觉锚点确保跨镜头角色一致性。",
+        `精通AIGC视觉资产的标准化与一致性构建，保证透视比例不变形，完成关键场景概念图与核心人物关键帧的锚定，确保风格、人物形象、角色站位不跑偏，动作表情不变形。
+多手段（如：角色站位图，场景全景图，人物标记和草模搭建）等方式能够有效克服 AI 视频生成的连贯性痛点，确保全片在特定画风与角色特征上的绝对统一，剧情连贯。`,
+      images: [
+        { src: "/uploads/workflow-phase-1-img-0.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-1.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-2.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-3.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-4.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-5.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-6.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-7.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-8.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-9.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-10.jpg", label: "" },
+        { src: "/uploads/workflow-phase-1-img-11.jpg", label: "" },
+      ],
+      compare: undefined as { before: string; after: string; label: string } | undefined,
+      techNote: undefined as string | undefined,
       audio: undefined as { src: string; label: string }[] | undefined,
     },
     {
-      title: "审美驾驭的像素级生成",
+      title: "AI 视觉生成",
       description:
-        "让工具向审美臣服。精准控制最终的视觉输出，彻底摒弃 AI 常见的粗粝随机感或塑料质感。深谙如何通过精准的提示词与深度的局部重绘，确保画面稳定呈现极具质感的复古亚洲都市动画与插画风格，让每一帧都经得起审视。",
-      images: [] as { src: string; label: string }[],
-      compare: { before: "", after: "", label: "" } as { before: string; after: string; label: string } | undefined,
-      techNote:
-        "ComfyUI 工作流中嵌入 IP-Adapter + 风格 LoRA，配合 After Effects 的色链进行后期色彩统调。关键帧人工精修（Photoshop 局部重绘），非一键生成。",
+        "Midjourney / Flow 概念分镜图 → 可灵 / 即梦生成视频。熟练使用 Photoshop 完成 AI 素材的局部精修、光影统一与元素合成。",
+      images: [
+        { src: "/uploads/workflow-phase-2-img-0.jpg", label: "" },
+        { src: "/uploads/workflow-phase-2-img-1.jpg", label: "" },
+        { src: "/uploads/workflow-phase-2-img-2.jpg", label: "" },
+        { src: "/uploads/workflow-phase-2-img-3.jpg", label: "" },
+        { src: "/uploads/workflow-phase-2-img-4.jpg", label: "" },
+      ],
+      compare: undefined as { before: string; after: string; label: string } | undefined,
+      techNote: undefined as string | undefined,
       audio: undefined as { src: string; label: string }[] | undefined,
     },
     {
-      title: "情绪本位的视听闭环",
+      title: "后期与成片",
       description:
-        "消除 AI 素材的碎片感。以传统的严苛影视后期标准，完成色彩科学的统调与动态串联。结合深度定制的情绪配乐与人声设计，将零散的生成片段，重塑为具备极高感染力的完整电影级叙事。",
-      images: [] as { src: string; label: string }[],
-      audio: [] as { src: string; label: string }[],
-      techNote:
-        "PR 时间线上精确到帧的节奏控制 + AE 动态合成。Suno 生成多版本配乐后人工筛选，TTS 配音后手动调整语速和停顿，最终混音确保人声、音效、配乐三层平衡。",
+        `拥有后期视听统合与情绪渲染能力。熟练使用 PR/AE/剪映等后期软件，通过剪辑将碎片化的AI素材进行节奏重塑。
+在声音工程方面，深度掌握TTS的参数微调与音频参考技术，尽量消除配音的"AI 机械感"，让情感更加丰富；同时熟练使用 Suno 等音频生成工具，独立完成环境音效与情绪配乐的定制，实现画面与声音的完美融合，让画面更具有情感。`,
+      images: [
+        { src: "/uploads/workflow-phase-3-img-0.jpg", label: "" },
+        { src: "/uploads/workflow-phase-3-img-1.jpg", label: "" },
+        { src: "", label: "" },
+      ],
+      audio: [
+        { src: "/uploads/workflow-phase-3-audio-0.wav", label: "在路边长大的夏天" },
+        { src: "/uploads/workflow-phase-3-audio-1.mp3", label: "老唐去世" },
+        { src: "/uploads/workflow-phase-3-audio-2.mp3", label: "节奏欢快" },
+      ],
+      techNote: undefined as string | undefined,
     },
   ],
   toolsLabel: "工具栈",
@@ -320,32 +377,33 @@ export const galleryData = {
  * resumeLink     - 简历链接（"#" 表示暂无链接）
  * ============================================================ */
 export const aboutData = {
-  avatarPath: "", // 改成 "/images/avatar.jpg" 等
+  avatarPath: "/uploads/avatar.jpg",
   highlights: [
     { label: "设计经验", value: "5 年" },
     { label: "AIGC 实战", value: "1 年+" },
     { label: "所在地", value: "深圳" },
-    { label: "状态", value: "开放远程协作" },
-    { label: "Vibe Coding", value: "4 个完整应用" },
+    { label: "状态", value: "求职中" },
   ],
-  introTitle: ["从传统视觉设计到 AIGC 编导，", "跨界但不跨行。"],
+  introTitle: ["从传统视觉设计到 AIGC 编导，行动起来", ""],
   introParagraphs: [
-    "我是朱思源，一名从传统视觉设计转型的 AIGC 编导实践者。环境设计科班出身，5 年设计经验覆盖城市更新、乡村振兴、文创开发等多个领域。2025 年起深度投入 AIGC 实战，独立完成 AI 漫剧项目全流程创作。",
-    "我的核心竞争力在于「跨界整合」—— 多年的美术、摄影、书法功底赋予我扎实的构图、光影和色彩判断力；技术侧的持续学习让我能驾驭 Midjourney、ComfyUI、可灵、即梦等主流 AI 工具链。更重要的是，我理解的不是某个工具怎么用，而是「视听语言如何与 AI 能力结合」，从而做出真正有感染力的内容。",
-    "湖北省书法家协会会员的身份，让我对东方审美与水墨视觉有独到理解 —— 这在当下 AI 生成「千篇一律的赛博美学」中，是难得的差异化优势。同时我持续追踪 AI 前沿技术，对 AIGC + 影视的工业化流程保持深度思考与迭代。",
-    "在 AI 辅助开发（Vibe Coding）方面，我已从单纯的 AI 使用者进化为能独立交付完整应用的创造者。为书画培训机构开发了集课时签到、消课扣费、学员管理于一体的运营系统；编写了短视频全平台一键分发脚本，打通多账号内容发布链路。此外，我还为外贸场景设计了两套 Claude Code Skill ——「B2B 搜索关键词生成器」输入产品品类或 HS Code 即可自动拆分子品类并生成 Google / B2B 平台搜索关键词矩阵；「个性化开发信引擎」抓取客户网站后完成背调分析、匹配我方工程案例，自动输出一对一定制开发信。从需求拆解、架构设计到部署落地，全流程 AI 协作驱动，把想法快速变成能用的产品。",
+    `我是朱思源，美术设计科班出身的AIGC影视编导与AI agent实践者。
+拥有 5 年跨领域设计经验，2025 年深度投入AIGC，已实现独立跑通 AI 漫剧项目制作流程。作为深圳市摄影家协会会员，精通构图、光影、调色等，能充分利用AI工具，死磕真实商业需求，提高效率，保持不断进化。`,
+    `我是 AIGC 编导实践者。
+在文本端：海量小说与影视的阅历，懂得如何与有魅力的故事、有弧光的角色共情；
+在视觉端：多年的美术、设计、摄影、书法功底，沉淀为我的审美基础；
+在技术端：对 Midjourney、ComfyUI、nanobanana、可灵、即梦等主流工具链的高效驾驭。
+热爱是我的最大驱动力。它让我始终保持高频迭代，深度思考。`,
   ],
   experienceLabel: "工作经历",
   experiences: [
     {
       period: "2025.05 — 至今",
-      role: "创始人 / AIGC 编导",
+      role: "AIGC 编导",
       company: "瀚思云创（深圳）文化有限公司",
       details: [
-        "主导 AI 漫剧全流程生产管线搭建，从剧本到成片闭环输出",
+        "主导 AI 漫剧全流程生产，从剧本到成片闭环输出",
         "攻克 AI 视觉生产核心痛点：多方法实现场景一致性和角色 IP 一致性控制",
-        "沉淀可复用 Prompt 模板、风格 Lora 基准与场景资产库，提升团队生产效率",
-        "代表作品：《我有一口镇厄炉》前 4 集成片，含完整 AIGC 生成流程",
+        "沉淀可复用 Prompt 模板、风格 Lora 基准与场景资产库，提升生产效率",
       ],
     },
     {
@@ -384,8 +442,8 @@ export const aboutData = {
   ],
   contactEmail: "281489594@qq.com",
   phone: "18672487652",
-  wechatQr: "", // 微信二维码图片路径，如 "/images/wechat-qr.jpg"
-  resumeLink: "#", // 改成你的简历 PDF 链接
+  wechatQr: "/uploads/wechat-qr.jpg",
+  resumeLink: "#",
   ctaPrimary: "联系我",
   ctaSecondary: "查看完整简历 (PDF)",
 };
@@ -399,34 +457,31 @@ export const aboutData = {
  * insights      - 核心观点列表（number / title / description）
  * ============================================================ */
 export const futureVisionData = {
-  sectionLabel: "未来演进 / FUTURE VISION",
-  sectionTitle: "下半场的进化：AIGC 影视的工业化定调",
+  sectionLabel: "关于AIGC的发展思考 / On the Development of AIGC",
+  sectionTitle: "AIGC影视的未来工业流程化思考",
   sectionIntro:
-    "当画质与一致性沦为普通的入场券，拉开差距的是：以经典叙事与契合故事的时事共振稳住情感基础，用 AIGC 的技术去解放科幻、仙侠、玄幻或是历史正剧等重工业题材的成本极限，打造可长线复利的数字明星与独特世界观 IP。",
+    "画质与一致性已经沦为普通的入场券，拉开差距的应该是：以经典叙事与契合故事的时事共振稳住情感基础，用AIGC的技术去解放科幻、仙侠、玄幻或是历史正剧等重工业题材的成本极限，打造可长线复利的数字明星与独特世界观IP。",
   insights: [
     {
       number: "01",
       title: "数字明星的商业营收",
       description:
-        `不再满足于跨镜头的"人脸一致"，而是运用标准化资产管线，在虚拟像素中淬炼出具备独特眼神、动作习惯与绝对产权的"数字演员"，沉淀具有长线复利价值的虚拟明星 IP。`,
+        `真人演员有塌房和老化风险，而数字明星是公司 100% 绝对持有的核心无形资产。
+内容端树立人设：利用短剧高频刷脸，只要故事好NPC也有感情，靠锁死的性格弧光凝聚长线粉丝黏性；
+商业端多维利用：凭借零边际成本的跨生态迁移，将数字明星同步至游戏 NPC、品牌代言与电商直播、乃至人形机器人。`,
     },
     {
       number: "02",
-      title: "重工业题材的「场景专权」",
+      title: "以组件形式累积资产重构视听史诗",
       description:
-        "避开 AI 微表情管理与极端情感雕琢的阶段性陷阱。用导演的视听语言代偿，将算力重武器砸向科幻、玄幻、武侠与历史正剧等重工业场景，用国风留白与宏大空间透视完成奇观的降维构建。",
+        `通过AIGC重点打造科幻、玄幻、武侠、历史正剧等传统影视的高预算题材。
+不执着于AI囤积单一、静态的宏大场景产物，而是在制作过程中拆解出可复利的特定画风、巨型科幻视觉资产、古代阵法符文、玄幻视觉符号等内容，以标准零件组装创意的方式，保住下限，推高上限。`,
     },
     {
       number: "03",
-      title: "叙事工程的「有限创新」",
+      title: "叙事工程的"有限创新"",
       description:
-        "人类几千年的情感内核无需彻底颠覆。坚守经典三幕式戏剧骨架作为 100% 工业化复制的叙事底盘（底层不乱创新）；同时以敏捷管线紧跟全球时事与当下大众情绪。用最成熟的逻辑，装最前沿的视觉故事。",
-    },
-    {
-      number: "04",
-      title: "全链路剧本统筹",
-      description:
-        `具备从"概念孵化"到"视觉落地"的全链路剧本统筹能力。熟练掌握"主题锚定 → 规则构建 → 冲突推演 → 结构排布 → 视听具象化"的标准创作过程。在实际创作中，能够从大纲逐步拆解详细的分集脚本。既能将空间调度思维与专业摄影的镜头语言前置，撰写出包含精确景别、运镜逻辑、视听节奏及特效标注的影视工业级分镜文本，也可以根据生成画面进行实时调整、修改。不仅能构建自洽的世界观设定，更能为后续的 AIGC 生成提供相对精确的执行依据。`,
+        "在信息流与算法时代，盲目的结构创新是高风险的商业自嗨。在叙事底层克制创新，人类几千年来复仇、母爱、逆袭、遗憾等情感未曾颠覆，确保故事的工业下限与情绪共鸣；同时，利用AIGC对元素进行高概念的"迷影式拼贴与重组"。将最成熟、最懂人心的剧本逻辑，套上最前沿、最炸裂的 AI 视觉外壳，去找到当下的时代共情。",
     },
   ],
 };
@@ -438,9 +493,10 @@ export const futureVisionData = {
  * ============================================================ */
 export const vibeCodingData = {
   sectionLabel: "Vibe Coding",
-  sectionTitle: "用 AI 把想法落地为产品。",
+  sectionTitle: "自驱提效，利他落地，淬炼自己的用户思维和实操能力。",
   sectionSubtitle:
-    "不只写 Prompt，而是理解真实业务需求后，借助 Claude Code 完成架构设计、开发迭代到部署的全流程。",
+    `AI 时代没有"能不能做"，核心在于"敢不敢去尝试，并想办法实现"。
+在深刻理解真实需求后，我通过 Vibe Coding 模式跑通了从架构设计、开发迭代、多模态验收到自动化部署的全流程交付。`,
   projects: [
     {
       name: "书画培训管理系统",
