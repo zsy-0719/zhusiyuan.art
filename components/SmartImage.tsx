@@ -25,20 +25,19 @@ export default function SmartImage({
 
   const isBase64 = src.startsWith("data:");
 
-  // base64 或非 fill 模式 → 用普通 img
+  // base64 或非 fill 模式 → 普通 img（不用 loading="lazy"，Safari 有 bug 会不加载）
   if (isBase64 || !fill) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
         src={src}
         alt={alt}
-        loading="lazy"
         className={className}
       />
     );
   }
 
-  // fill 模式 + 外部图片 → Next.js Image
+  // fill 模式 → Next.js Image（父容器需 relative + 确定尺寸）
   return (
     <Image
       src={src}
