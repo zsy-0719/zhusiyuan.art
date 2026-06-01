@@ -80,7 +80,7 @@ export default function About() {
               className="flex flex-col gap-5 text-base md:text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed"
             >
               {about.introParagraphs.map((p: string, i: number) => (
-                <p key={i}>{p}</p>
+                <p key={i} id={i === about.introParagraphs.length - 1 ? "about-last-line" : undefined}>{p}</p>
               ))}
             </motion.div>
           </div>

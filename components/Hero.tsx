@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSiteData } from "@/lib/site-data-context";
+import HeroIntro from "./HeroIntro";
 
 const sizeClasses = [
   "text-xs",
@@ -97,7 +98,23 @@ export default function Hero() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const personalLines: string[] = (hero as any).personalLines || [];
 
-  return (
+  const [introDone, setIntroDone] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && sessionStorage.getItem("hero-intro-done") === "1") {
+      setIntroDone(true);
+    }
+  }, []);
+
+  const handleIntroComplete = () => {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("hero-intro-done", "1");
+    }
+    setIntroDone(true);
+  };
+
+  /* 英雄区始终渲染（即使 intro 还在播），避免切场景时的空白闪烁 */
+  const heroContent = (
     <section
       ref={containerRef}
       className="relative h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black"
@@ -106,7 +123,6 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 blur-3xl opacity-60" />
       </motion.div>
 
-      {/* 弹幕层 */}
       {personalLines.length > 0 && <DanmakuLayer lines={personalLines} />}
 
       <motion.div style={{ scale, opacity }} className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -158,5 +174,12 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
+  );
+
+  return (
+    <>
+      {heroContent}
+      {!introDone && <HeroIntro onComplete={handleIntroComplete} />}
+    </>
   );
 }

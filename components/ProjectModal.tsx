@@ -188,9 +188,9 @@ function CharacterCards({
                 </button>
               ))}
             </div>
-            <div className="min-w-0">
+            <div className="min-w-[140px] flex-1">
               <h4 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{char.name}</h4>
-              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{char.desc}</p>
+              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed break-words">{char.desc}</p>
             </div>
           </div>
         ))}
@@ -251,6 +251,7 @@ export default function ProjectModal({
           exit={{ opacity: 0, scale: 0.97, y: 16 }}
           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
           onClick={(e) => e.stopPropagation()}
+          id="project-modal"
           className="relative w-full max-w-5xl my-6 mx-3 bg-white dark:bg-black rounded-2xl border border-zinc-200/60 dark:border-zinc-800/60 overflow-hidden shadow-2xl"
         >
           {/* 关闭按钮 */}

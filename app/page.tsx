@@ -7,7 +7,7 @@ import FutureVision from "@/components/FutureVision";
 import VibeCoding from "@/components/VibeCoding";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import BackToTopDog from "@/components/BackToTopDog";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <Gallery />
         <Footer />
       </main>
-      <ScrollToTop />
+      <BackToTopDog />
     </>
   );
 }

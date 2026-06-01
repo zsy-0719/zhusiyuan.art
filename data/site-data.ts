@@ -181,6 +181,7 @@ export const projectsData = [
           { src: "/images/zhenelu/asset-岩植怪三视图.jpg", label: "岩植怪" },
           { src: "/images/zhenelu/asset-怪物形象.jpeg", label: "怪物形象" },
           { src: "/images/zhenelu/asset-炼化概念.jpeg", label: "炼化概念" },
+          { src: "/images/zhenelu/设定1.png", label: "项目设定" },
           { src: "/images/zhenelu/asset-识海.png", label: "识海" },
           { src: "/uploads/project-0-section-4-img-6.jpg", label: "" },
         ],
@@ -443,7 +444,7 @@ export const aboutData = {
   contactEmail: "281489594@qq.com",
   phone: "18672487652",
   wechatQr: "/uploads/wechat-qr.jpg",
-  resumeLink: "#",
+  resumeLink: "/uploads/朱思源_AIGC视频编导_武汉科技大学.pdf",
   ctaPrimary: "联系我",
   ctaSecondary: "查看完整简历 (PDF)",
 };

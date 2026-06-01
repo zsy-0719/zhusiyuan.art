@@ -16,7 +16,7 @@ const SiteDataContext = createContext<SiteDataContextType | null>(null);
 export function SiteDataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<AdminData>(getDefaultData);
   const [version, setVersion] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(true);
 
   useEffect(() => {
     loadData().then((d) => {
