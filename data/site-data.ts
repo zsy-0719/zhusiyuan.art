@@ -97,7 +97,6 @@ export const projectsData = [
 结果一念之差，居然为了救一个人，裂炉而死。
 意外重生回到 1995 年，陈故暗暗发誓：这一世，我一定要守住自己坏人的人设！`,
         images: [
-          { src: "/images/zhenelu/设定1.png", label: "项目设定" },
           { src: "/uploads/project-0-section-0-img-0.jpg", label: "第一集" },
           { src: "/uploads/project-0-section-0-img-1.jpg", label: "第二集" },
           { src: "/uploads/project-0-section-0-img-2.jpg", label: "第三集" },
@@ -268,6 +267,7 @@ export const workflowData = {
 既能将空间调度思维与专业摄影的镜头语言前置，撰写出包含精确景别、运镜逻辑、视听节奏及特效标注的影视工业级分镜文本，也可以根据生成画面进行实时调整、修改。
 不仅能构建自洽的世界观设定，更能为后续的 AIGC 生成提供相对精确的执行依据。`,
       images: [
+        { src: "/images/zhenelu/设定1.png", label: "项目设定" },
         { src: "/uploads/workflow-phase-0-img-0.jpg", label: "第一季剧本大纲内容" },
         { src: "/uploads/workflow-phase-0-img-1.jpg", label: "分集内容" },
         { src: "/uploads/workflow-phase-0-img-2.jpg", label: "详细分镜脚本" },
