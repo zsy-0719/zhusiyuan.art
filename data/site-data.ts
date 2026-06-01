@@ -97,6 +97,7 @@ export const projectsData = [
 结果一念之差，居然为了救一个人，裂炉而死。
 意外重生回到 1995 年，陈故暗暗发誓：这一世，我一定要守住自己坏人的人设！`,
         images: [
+          { src: "/images/zhenelu/设定1.png", label: "项目设定" },
           { src: "/uploads/project-0-section-0-img-0.jpg", label: "第一集" },
           { src: "/uploads/project-0-section-0-img-1.jpg", label: "第二集" },
           { src: "/uploads/project-0-section-0-img-2.jpg", label: "第三集" },
@@ -181,7 +182,6 @@ export const projectsData = [
           { src: "/images/zhenelu/asset-岩植怪三视图.jpg", label: "岩植怪" },
           { src: "/images/zhenelu/asset-怪物形象.jpeg", label: "怪物形象" },
           { src: "/images/zhenelu/asset-炼化概念.jpeg", label: "炼化概念" },
-          { src: "/images/zhenelu/设定1.png", label: "项目设定" },
           { src: "/images/zhenelu/asset-识海.png", label: "识海" },
           { src: "/uploads/project-0-section-4-img-6.jpg", label: "" },
         ],
