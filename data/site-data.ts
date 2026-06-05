@@ -35,8 +35,8 @@ export const heroData = {
   subtitle: "AIGC 编导 · AI 视频导演 · 概念视觉开发",
   name: "朱思源",
   tagline: [
-    "整装待发，能打能拼不掉链",
-    "从剧本内核到最终呈现，全流程内容创作的AIGC人",
+    "从剧本内核到最终呈现 全流程内容创作的AIGC编导超级个体",
+    "用镜头和审美，把好故事落地",
   ],
   personalLines: [
     "ENFJ但是没有人觉得我像E人",
@@ -103,21 +103,6 @@ export const projectsData = [
         videos: [
           { cover: "/uploads/project-0-section-0-img-1.jpg", label: "第二集", link: "https://pan.baidu.com/s/1HNM4f8EkMMOkWZMPz2S1mw?pwd=6666" },
           { cover: "/uploads/project-0-section-0-img-2.jpg", label: "第三集", link: "https://pan.baidu.com/s/1ew7iCcywO6k20tSGhQTNdA?pwd=6666" },
-        ],
-      },
-      {
-        title: "创作思路",
-        highlights: [
-          {
-            title: "高光镜头 1 —— 厄炉首次登场",
-            description:
-              "这里写下这个镜头的创作思路：为什么选择这个画面、想传达什么情绪、参考了哪些视觉风格、在生成过程中做了哪些取舍。",
-            images: [
-              { src: "/uploads/project-0-section-0-img-0.jpg", label: "关键帧 1" },
-              { src: "/uploads/project-0-section-0-img-0.jpg", label: "关键帧 2" },
-            ],
-            video: { cover: "/uploads/project-0-section-0-img-0.jpg", link: "https://pan.baidu.com/s/xxx?pwd=6666" },
-          },
         ],
       },
       {

@@ -647,9 +647,9 @@ export default function HeroIntro({ onComplete }: { onComplete: () => void }) {
                   >
                     <div style={{ animation: "text-thump 0.45s ease-out" }}>
                       <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#1a1a1a] leading-tight whitespace-nowrap">
-                        超级个体已就位，
+                        整装待发，
                         <br className="sm:hidden" />
-                        随时准备打硬仗
+                        能打能拼不掉链
                       </p>
                     </div>
                   </motion.div>
