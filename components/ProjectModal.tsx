@@ -15,6 +15,12 @@ export interface ProjectSection {
     desc: string;
     images: string[];
   }[];
+  highlights?: {
+    title: string;
+    description: string;
+    images: { src: string; label?: string }[];
+    video?: { cover: string; link: string };
+  }[];
 }
 
 interface ProjectModalProps {
@@ -208,6 +214,117 @@ function CharacterCards({
 }
 
 /* ============================================================
+ * 创作思路 —— 文字 + 关键帧 + 成品片段
+ * ============================================================ */
+function HighlightCards({
+  highlights,
+}: {
+  highlights: NonNullable<ProjectSection["highlights"]>;
+}) {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  return (
+    <>
+      <div className="flex flex-col gap-6">
+        {highlights.map((hl, hi) => (
+          <div
+            key={hi}
+            className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50/50 dark:bg-zinc-950/50 overflow-hidden"
+          >
+            {/* 镜头标题 */}
+            <div className="px-5 py-3 border-b border-zinc-100 dark:border-zinc-900">
+              <h4 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                {hl.title}
+              </h4>
+            </div>
+
+            <div className="p-5 flex flex-col gap-4">
+              {/* 创作思路文字 */}
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                {hl.description}
+              </p>
+
+              {/* 关键帧 */}
+              {hl.images && hl.images.length > 0 && (
+                <div>
+                  <span className="text-[11px] font-medium tracking-[0.08em] uppercase text-zinc-400 dark:text-zinc-500">
+                    关键帧
+                  </span>
+                  <div className="mt-2 grid grid-cols-2 md:grid-cols-3 gap-2">
+                    {hl.images.map((img, ii) => (
+                      <button
+                        key={ii}
+                        onClick={() =>
+                          setLightbox({ src: img.src, alt: img.label || hl.title })
+                        }
+                        className="cursor-pointer text-left"
+                      >
+                        <div className="overflow-hidden rounded-lg border border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-900">
+                          <SmartImage
+                            src={img.src}
+                            alt={img.label || ""}
+                            className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
+                          />
+                        </div>
+                        {img.label && (
+                          <p className="mt-1 text-[11px] text-zinc-400 dark:text-zinc-500 text-center truncate">
+                            {img.label}
+                          </p>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 成品片段 */}
+              {hl.video && hl.video.link && (
+                <div>
+                  <span className="text-[11px] font-medium tracking-[0.08em] uppercase text-zinc-400 dark:text-zinc-500">
+                    成品片段
+                  </span>
+                  <div className="mt-2">
+                    <a
+                      href={hl.video.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group"
+                    >
+                      <div className="relative overflow-hidden rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-50 dark:bg-zinc-950 max-w-sm">
+                        <SmartImage
+                          src={hl.video.cover}
+                          alt="成品片段"
+                          className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-14 h-14 flex items-center justify-center rounded-full bg-black/50 text-white/90 group-hover:bg-black/70 group-hover:scale-110 transition-all">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                              <polygon points="8,5 19,12 8,19" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {lightbox && (
+        <ImageLightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </>
+  );
+}
+
+/* ============================================================
  * 主弹窗
  * ============================================================ */
 export default function ProjectModal({
@@ -294,7 +411,9 @@ export default function ProjectModal({
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">{section.intro}</p>
                 )}
 
-                {section.videos && section.videos.length > 0 ? (
+                {section.highlights && section.highlights.length > 0 ? (
+                  <HighlightCards highlights={section.highlights} />
+                ) : section.videos && section.videos.length > 0 ? (
                   <VideoGrid videos={section.videos} />
                 ) : (
                   section.images && section.images.length > 0 && <ImageGrid images={section.images} />

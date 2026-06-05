@@ -1,4 +1,4 @@
-/*
+﻿/*
  * ================================================================
  *  网站内容配置文件 —— 改这个文件就能更新整个网站
  * ================================================================
@@ -35,8 +35,8 @@ export const heroData = {
   subtitle: "AIGC 编导 · AI 视频导演 · 概念视觉开发",
   name: "朱思源",
   tagline: [
-    "从剧本内核到最终呈现 全流程内容创作的AIGC编导超级个体",
-    "用镜头和审美，把好故事落地",
+    "整装待发，能打能拼不掉链",
+    "从剧本内核到最终呈现，全流程内容创作的AIGC人",
   ],
   personalLines: [
     "ENFJ但是没有人觉得我像E人",
@@ -97,14 +97,27 @@ export const projectsData = [
 结果一念之差，居然为了救一个人，裂炉而死。
 意外重生回到 1995 年，陈故暗暗发誓：这一世，我一定要守住自己坏人的人设！`,
         images: [
-          { src: "/uploads/project-0-section-0-img-0.jpg", label: "第一集" },
           { src: "/uploads/project-0-section-0-img-1.jpg", label: "第二集" },
           { src: "/uploads/project-0-section-0-img-2.jpg", label: "第三集" },
         ],
         videos: [
-          { cover: "/uploads/project-0-section-0-img-0.jpg", label: "第一集", link: "https://pan.baidu.com/s/17tuGx9khtHrN9xJ0rPnnhw?pwd=6666" },
           { cover: "/uploads/project-0-section-0-img-1.jpg", label: "第二集", link: "https://pan.baidu.com/s/1HNM4f8EkMMOkWZMPz2S1mw?pwd=6666" },
           { cover: "/uploads/project-0-section-0-img-2.jpg", label: "第三集", link: "https://pan.baidu.com/s/1ew7iCcywO6k20tSGhQTNdA?pwd=6666" },
+        ],
+      },
+      {
+        title: "创作思路",
+        highlights: [
+          {
+            title: "高光镜头 1 —— 厄炉首次登场",
+            description:
+              "这里写下这个镜头的创作思路：为什么选择这个画面、想传达什么情绪、参考了哪些视觉风格、在生成过程中做了哪些取舍。",
+            images: [
+              { src: "/uploads/project-0-section-0-img-0.jpg", label: "关键帧 1" },
+              { src: "/uploads/project-0-section-0-img-0.jpg", label: "关键帧 2" },
+            ],
+            video: { cover: "/uploads/project-0-section-0-img-0.jpg", link: "https://pan.baidu.com/s/xxx?pwd=6666" },
+          },
         ],
       },
       {
@@ -116,9 +129,9 @@ export const projectsData = [
             desc: `神秘「镇厄炉」的拥有者，重生前已将镇厄炉升至八阶，差一步大圆满。
 前世为救一个身具大因果之人而死。死后重生回到 1995 年，那一年陈故十八岁，大学生。`,
             images: [
-              "/images/zhenelu/character-01.png",
-              "/images/zhenelu/character-02.png",
-              "/images/zhenelu/character-03.jpg",
+              "/images/zhenelu/character-01.webp",
+              "/images/zhenelu/character-02.webp",
+              "/images/zhenelu/character-03.webp",
             ],
           },
           {
@@ -126,22 +139,22 @@ export const projectsData = [
             desc: `中医传承家庭的长女。家境优越，爷爷更是顶尖中医名家。
 因抗拒长辈安排的刻板人生，她叛逆离家，躲进小医院当起基层护士。
 她与陈故偶然相遇，两人的交织让她的逃离之路走向了未知的方向。`,
-            images: ["/images/zhenelu/character-zhouning.png"],
+            images: ["/images/zhenelu/character-zhouning.webp"],
           },
           {
             name: "林朝",
             desc: "陈故好友，古武家族出身。前世意外死于一场试炼。性格和陈故相比，略显木讷，善良而忠诚。",
             images: [
-              "/images/zhenelu/character-linchao-01.png",
-              "/images/zhenelu/character-linchao-02.png",
+              "/images/zhenelu/character-linchao-01.webp",
+              "/images/zhenelu/character-linchao-02.webp",
             ],
           },
           {
             name: "沈无忧",
             desc: "异能者大家族沈家的千金，身具大因果，在沈家地位特殊。异能未知。性格表面散漫，实则骨子里坚韧不屈。",
             images: [
-              "/images/zhenelu/character-shenwuyou-01.png",
-              "/images/zhenelu/character-shenwuyou-02.png",
+              "/images/zhenelu/character-shenwuyou-01.webp",
+              "/images/zhenelu/character-shenwuyou-02.webp",
             ],
           },
         ],
@@ -149,16 +162,16 @@ export const projectsData = [
       {
         title: "分镜图",
         images: [
-          { src: "/images/zhenelu/sb-01.jpeg", label: "场景 01" },
+          { src: "/images/zhenelu/sb-01.webp", label: "场景 01" },
           { src: "/uploads/project-0-section-2-img-1.jpg", label: "场景 00-1-1" },
-          { src: "/images/zhenelu/sb-00-11.jpeg", label: "场景 00-11" },
-          { src: "/images/zhenelu/sb-00-13.png", label: "场景 00-13" },
+          { src: "/images/zhenelu/sb-00-11.webp", label: "场景 00-11" },
+          { src: "/images/zhenelu/sb-00-13.webp", label: "场景 00-13" },
           { src: "/uploads/project-0-section-2-img-4.jpg", label: "场景 17" },
-          { src: "/images/zhenelu/sb-天台04.png", label: "天台" },
+          { src: "/images/zhenelu/sb-天台04.webp", label: "天台" },
           { src: "/uploads/project-0-section-2-img-6.jpg", label: "打针" },
           { src: "/uploads/project-0-section-2-img-7.jpg", label: "拿水" },
           {
-            src: "/images/zhenelu/sb-masterpiece,_8K,_ultra-realistic,_202604151725.png",
+            src: "/images/zhenelu/sb-masterpiece,_8K,_ultra-realistic,_202604151725.webp",
             label: "概念图",
           },
         ],
@@ -166,22 +179,22 @@ export const projectsData = [
       {
         title: "封面与文字设计",
         images: [
-          { src: "/images/zhenelu/cover-抖音封面.png", label: "抖音封面" },
-          { src: "/images/zhenelu/cover-厄炉（竖.png", label: "厄炉（竖）" },
+          { src: "/images/zhenelu/cover-抖音封面.webp", label: "抖音封面" },
+          { src: "/images/zhenelu/cover-厄炉（竖.webp", label: "厄炉（竖）" },
         ],
       },
       {
         title: "关键资产",
         images: [
-          { src: "/uploads/project-0-section-4-img-0.jpg", label: "厄炉视觉" },
+          { src: "/uploads/project-0-section-4-img-0.webp", label: "厄炉视觉" },
           {
-            src: "/images/zhenelu/asset-大树守卫白底三视图.jpeg",
+            src: "/images/zhenelu/asset-大树守卫白底三视图.webp",
             label: "大树守卫",
           },
-          { src: "/images/zhenelu/asset-岩植怪三视图.jpg", label: "岩植怪" },
-          { src: "/images/zhenelu/asset-怪物形象.jpeg", label: "怪物形象" },
-          { src: "/images/zhenelu/asset-炼化概念.jpeg", label: "炼化概念" },
-          { src: "/images/zhenelu/asset-识海.png", label: "识海" },
+          { src: "/images/zhenelu/asset-岩植怪三视图.webp", label: "岩植怪" },
+          { src: "/images/zhenelu/asset-怪物形象.webp", label: "怪物形象" },
+          { src: "/images/zhenelu/asset-炼化概念.webp", label: "炼化概念" },
+          { src: "/images/zhenelu/asset-识海.webp", label: "识海" },
           { src: "/uploads/project-0-section-4-img-6.jpg", label: "" },
         ],
       },
@@ -220,24 +233,24 @@ export const projectsData = [
           {
             name: "唐宁",
             desc: "在城市打拼受挫的年轻人，被父亲的谎言骗回家，踏上一段荒诞又无法拒绝的川藏线之旅。",
-            images: ["/images/beiying/character-唐宁白底三视图.png"],
+            images: ["/images/beiying/character-唐宁白底三视图.webp"],
           },
           {
             name: "老唐",
             desc: "城中村餐馆老板，嘴硬心软，爱难说出口。用最拧巴的方式，用谎言唤回两年不回家的儿子，完成最后的告别。",
-            images: ["/images/beiying/character-老唐白底三视图.png"],
+            images: ["/images/beiying/character-老唐白底三视图.webp"],
           },
         ],
       },
       {
         title: "重要分镜图",
         images: [
-          { src: "/images/beiying/sb-01.png", label: "分镜 01" },
-          { src: "/images/beiying/sb-02.png", label: "分镜 02" },
-          { src: "/images/beiying/sb-04.png", label: "分镜 04" },
-          { src: "/images/beiying/sb-05.jpeg", label: "分镜 05" },
-          { src: "/images/beiying/sb-06.png", label: "分镜 06" },
-          { src: "/images/beiying/sb-07.png", label: "分镜 07" },
+          { src: "/images/beiying/sb-01.webp", label: "分镜 01" },
+          { src: "/images/beiying/sb-02.webp", label: "分镜 02" },
+          { src: "/images/beiying/sb-04.webp", label: "分镜 04" },
+          { src: "/images/beiying/sb-05.webp", label: "分镜 05" },
+          { src: "/images/beiying/sb-06.webp", label: "分镜 06" },
+          { src: "/images/beiying/sb-07.webp", label: "分镜 07" },
         ],
       },
     ],

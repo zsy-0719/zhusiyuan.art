@@ -410,6 +410,10 @@ function ProjectDetailEditor({
   const setVideos = (si: number, videos: any[]) => {
     updateSection(si, { ...sections[si], videos });
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const setHighlights = (si: number, highlights: any[]) => {
+    updateSection(si, { ...sections[si], highlights });
+  };
   const removeSection = (i: number) => {
     onChange({ ...project, sections: sections.filter((_, j) => j !== i) } as ProjectData);
   };
@@ -554,6 +558,146 @@ function ProjectDetailEditor({
               >
                 + 添加视频
               </button>
+            </div>
+          </div>
+
+          {/* 创作思路（文字 + 关键帧 + 成品片段） */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <label className="text-xs font-medium text-zinc-500">创作思路</label>
+              <button
+                type="button"
+                onClick={() => setHighlights(si, [...((sec as any).highlights || []), { title: "", description: "", images: [], video: { cover: "", link: "" } }])}
+                className="text-xs text-blue-500 hover:text-blue-600 font-medium"
+              >
+                + 添加镜头拆解
+              </button>
+            </div>
+            <div className="space-y-4">
+              {((sec as any).highlights || [])?.map?.((hl: { title: string; description: string; images: { src: string; label?: string }[]; video?: { cover: string; link: string } }, hi: number) => (
+                <div key={hi} className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-950/50 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <T label="镜头标题" value={hl.title} onChange={(v) => {
+                      const hlList: any[] = [...((sec as any).highlights || [])];
+                      hlList[hi] = { ...hlList[hi], title: v };
+                      setHighlights(si, hlList);
+                    }} />
+                    <button
+                      type="button"
+                      onClick={() => setHighlights(si, ((sec as any).highlights || []).filter((_: any, j: number) => j !== hi))}
+                      className="text-xs text-red-400 hover:text-red-500 shrink-0 ml-2"
+                    >
+                      删除此镜头
+                    </button>
+                  </div>
+                  <T label="创作思路文字" area value={hl.description} onChange={(v) => {
+                    const hlList: any[] = [...((sec as any).highlights || [])];
+                    hlList[hi] = { ...hlList[hi], description: v };
+                    setHighlights(si, hlList);
+                  }} />
+
+                  {/* 关键帧图片 */}
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="text-xs font-medium text-zinc-500">关键帧</label>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const hlList: any[] = [...((sec as any).highlights || [])];
+                          hlList[hi] = { ...hlList[hi], images: [...(hlList[hi].images || []), { src: "", label: "" }] };
+                          setHighlights(si, hlList);
+                        }}
+                        className="text-[10px] text-blue-500 hover:text-blue-600"
+                      >
+                        + 添加关键帧
+                      </button>
+                    </div>
+                    <div className="grid grid-cols-3 gap-2">
+                      {(hl.images || []).map((img: { src: string; label?: string }, ii: number) => (
+                        <div key={ii} className="space-y-1">
+                          <ImagePicker
+                            value={img.src}
+                            onChange={(v) => {
+                              const hlList: any[] = [...((sec as any).highlights || [])];
+                              const imgs = [...(hlList[hi].images || [])];
+                              imgs[ii] = { ...imgs[ii], src: v };
+                              hlList[hi] = { ...hlList[hi], images: imgs };
+                              setHighlights(si, hlList);
+                            }}
+                          />
+                          <input
+                            type="text"
+                            value={img.label || ""}
+                            onChange={(e) => {
+                              const hlList: any[] = [...((sec as any).highlights || [])];
+                              const imgs = [...(hlList[hi].images || [])];
+                              imgs[ii] = { ...imgs[ii], label: e.target.value };
+                              hlList[hi] = { ...hlList[hi], images: imgs };
+                              setHighlights(si, hlList);
+                            }}
+                            placeholder="关键帧说明"
+                            className="w-full text-[10px] px-1.5 py-0.5 rounded border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-500"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const hlList: any[] = [...((sec as any).highlights || [])];
+                              const imgs = (hlList[hi].images || []).filter((_: any, j: number) => j !== ii);
+                              hlList[hi] = { ...hlList[hi], images: imgs };
+                              setHighlights(si, hlList);
+                            }}
+                            className="text-[10px] text-red-400 hover:text-red-500"
+                          >
+                            删除
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 成品片段 */}
+                  <div>
+                    <label className="block text-xs font-medium text-zinc-500 mb-1.5">成品片段（封面 + 链接）</label>
+                    <div className="flex gap-3 p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                      <div className="w-28 shrink-0">
+                        <ImagePicker
+                          value={hl.video?.cover || ""}
+                          onChange={(v) => {
+                            const hlList: any[] = [...((sec as any).highlights || [])];
+                            hlList[hi] = { ...hlList[hi], video: { ...hlList[hi].video, cover: v } };
+                            setHighlights(si, hlList);
+                          }}
+                          className="aspect-video"
+                        />
+                      </div>
+                      <div className="flex-1 space-y-2">
+                        <input
+                          type="url"
+                          value={hl.video?.link || ""}
+                          onChange={(e) => {
+                            const hlList: any[] = [...((sec as any).highlights || [])];
+                            hlList[hi] = { ...hlList[hi], video: { ...hlList[hi].video, link: e.target.value } };
+                            setHighlights(si, hlList);
+                          }}
+                          placeholder="百度网盘链接"
+                          className="w-full text-sm px-3 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const hlList: any[] = [...((sec as any).highlights || [])];
+                            hlList[hi] = { ...hlList[hi], video: undefined };
+                            setHighlights(si, hlList);
+                          }}
+                          className="text-[10px] text-red-400 hover:text-red-500"
+                        >
+                          删除成品片段
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
